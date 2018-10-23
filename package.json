@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "async": "^2.6.1",
-    "kafka-node": "^3.0.1"
+    "kafka-node": "^3.0.1",
+    "node-rdkafka": "^2.4.2"
   }
 }

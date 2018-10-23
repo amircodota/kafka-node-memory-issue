@@ -22,7 +22,7 @@ node producer.js
 Now run the consumer, which should consume more and more memory, and should probably eventually die
 
 ```
-node consumer.js
+LD_LIBRARY_PATH=`pwd`/node_modules/node-rdkafka/build/deps node rdconsumer.js
 ```
 
 # Analysis

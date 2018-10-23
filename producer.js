@@ -5,7 +5,7 @@ const client = new kafka.KafkaClient();
 const producer = new kafka.HighLevelProducer(client);
 
 let queue = async.queue((message, done) => {
-    producer.send([{ topic: 'mem-issue-test', messages: [message], attributes: 1}], err => {
+    producer.send([{ topic: 'mem-issue-test2', messages: [message], attributes: 1}], err => {
        if (err) console.error(err);
        done();
     });
