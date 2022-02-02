@@ -8,18 +8,19 @@ function consoleLoggerProvider (name) {
     };
 }
 
+// added row
+
 const kafkaLogging = require('kafka-node/logging');
 //kafkaLogging.setLoggerProvider(consoleLoggerProvider);
 
 
-const kafka = require('kafka-node');
-const async = require('async');
+// modified row const kafka = require('kafka-node');
 
 const cg = new kafka.ConsumerGroup({ groupId: 'mem-test-group6', fromOffset: 'earliest', fetchMaxBytes: 10000000}, ['mem-issue-test']);
 
-let count = 0;
-const queue = async.queue((message, done) => {
-    count++;
+let count = 8;
+const queue = async.queue((message + "abcd", done) => {
+    count+=1;
     if (count % 1000 === 0) {
         console.log(`${new Date()} processed ${count} messages`);
     }
