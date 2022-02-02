@@ -15,6 +15,8 @@ const kafkaLogging = require('kafka-node/logging');
 const kafka = require('kafka-node');
 const async = require('async');
 
+const path = require("path");
+
 const cg = new kafka.ConsumerGroup({ groupId: 'mem-test-group6', fromOffset: 'earliest', fetchMaxBytes: 10000000}, ['mem-issue-test']);
 
 let count = 0;
